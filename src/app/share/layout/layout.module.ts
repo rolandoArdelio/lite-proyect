@@ -6,11 +6,24 @@ import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { RibbonComponent } from './ribbon/ribbon.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [MainLayoutComponent, EmpyLayoutComponent, HeaderComponent, NavigationComponent, FooterComponent, RibbonComponent],
+  declarations: [
+    MainLayoutComponent, 
+    EmpyLayoutComponent, 
+    HeaderComponent, 
+    NavigationComponent, 
+    FooterComponent, 
+    RibbonComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+  ],
+  exports:[
+    MainLayoutComponent, 
+    EmpyLayoutComponent
   ]
 })
 export class LayoutModule { }
